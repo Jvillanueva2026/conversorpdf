@@ -5,7 +5,7 @@
 //  Contraseña provisoria: cambiame
 // =====================================================================
 
-const HUELLA = "7e506e58321c5a877f4393b49ac84cca2b922028010ef1c85a0f5a281497c10a";
+const HUELLA = "1b9b1b68b49b555e5c8298a51a4fdfb0b8a5ac6eaba0353f7fa1675b1ea694ca";
 
 async function calcularHuella(texto) {
   const datos = new TextEncoder().encode("conversorpdf:" + texto);
