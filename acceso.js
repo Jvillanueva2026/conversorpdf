@@ -1,9 +1,3 @@
-// =====================================================================
-//  ACCESO CON CONTRASEÑA
-//  Acá NO está la contraseña, solo su "huella" (hash SHA-256).
-//  Para cambiarla, seguí las instrucciones del README.
-//  Contraseña provisoria: cambiame
-// =====================================================================
 
 const HUELLA = "1b9b1b68b49b555e5c8298a51a4fdfb0b8a5ac6eaba0353f7fa1675b1ea694ca";
 
