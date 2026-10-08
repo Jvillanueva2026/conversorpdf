@@ -108,3 +108,18 @@ select { font: inherit; padding: 6px 8px; border: 1px solid var(--linea); border
   .control ul { grid-column: 1; }
   .total-filtro { margin-left: 0; width: 100%; }
 }
+
+/* Pantalla de acceso */
+.acceso { min-height: 100vh; display: grid; place-items: center; padding: 20px; }
+.acceso form {
+  width: 100%; max-width: 360px; display: flex; flex-direction: column; gap: 10px;
+  background: var(--superficie); padding: 28px; border-radius: var(--radio); border-top: 6px solid var(--verde);
+}
+.acceso h1 { font-size: 1.4rem; margin-bottom: 8px; }
+.acceso label { font-weight: 500; }
+.acceso input {
+  font: inherit; padding: 10px 12px; border: 1px solid var(--linea); border-radius: var(--radio);
+}
+.acceso input:focus-visible { outline: 3px solid var(--verde); outline-offset: 1px; }
+.error-acceso { color: var(--rojo); min-height: 1.5em; margin: 0; }
+[hidden] { display: none !important; }

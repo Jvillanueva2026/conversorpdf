@@ -10,7 +10,17 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <main>
+  <section id="acceso" class="acceso">
+    <form id="form-acceso">
+      <h1>Extractos bancarios a Excel</h1>
+      <label for="clave">Contraseña</label>
+      <input type="password" id="clave" autocomplete="current-password" required>
+      <button type="submit">Entrar</button>
+      <p id="error-acceso" class="error-acceso" role="alert"></p>
+    </form>
+  </section>
+
+  <main hidden>
     <header class="cabecera">
       <h1>Extractos bancarios a Excel</h1>
       <p>Subí los resúmenes en PDF tal como los descarga el banco. Se controla el saldo renglón por renglón, se clasifica cada movimiento y se genera un Excel listo para filtrar. Los archivos no salen de tu computadora.</p>
@@ -63,5 +73,6 @@
   <script src="reglas.js"></script>
   <script src="parser.js"></script>
   <script src="app.js"></script>
+  <script src="acceso.js"></script>
 </body>
 </html>
