@@ -1,5 +1,5 @@
 
-const HUELLA = "ef233ec96ca12ff0fbf09e0215ccb293e1bf5eae2ebe1cac439f9386630cf34a";
+const HUELLA = "1b9b1b68b49b555e5c8298a51a4fdfb0b8a5ac6eaba0353f7fa1675b1ea694ca";
 
 async function calcularHuella(texto) {
   const datos = new TextEncoder().encode("conversorpdf:" + texto);
