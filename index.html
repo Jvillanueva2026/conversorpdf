@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Extractos a Excel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main>
+    <header class="cabecera">
+      <h1>Extractos bancarios a Excel</h1>
+      <p>Subí los resúmenes en PDF tal como los descarga el banco. Se controla el saldo renglón por renglón, se clasifica cada movimiento y se genera un Excel listo para filtrar. Los archivos no salen de tu computadora.</p>
+    </header>
+
+    <section class="carga">
+      <label id="zona" class="zona" for="archivos">
+        <input type="file" id="archivos" accept="application/pdf" multiple>
+        <strong>Elegí o arrastrá los PDF</strong>
+        <span>Podés subir varios meses juntos; se unen en un solo Excel.</span>
+      </label>
+      <p id="estado" class="estado" role="status"></p>
+    </section>
+
+    <section id="resultados" hidden>
+      <div class="barra">
+        <h2 id="titulo-resultados">Resultado</h2>
+        <button id="descargar" type="button">Descargar Excel</button>
+      </div>
+
+      <div id="controles"></div>
+
+      <div class="dos-columnas">
+        <div>
+          <h3>Por imputación</h3>
+          <div class="tabla-scroll"><table id="tabla-imputacion"></table></div>
+        </div>
+        <div>
+          <h3>Impuestos del período</h3>
+          <div class="tabla-scroll"><table id="tabla-impuestos"></table></div>
+          <p class="nota">Ley 25413 neta de reintegros. El porcentaje computable como pago a cuenta depende de la categoría del contribuyente.</p>
+        </div>
+      </div>
+
+      <h3>Movimientos</h3>
+      <div class="filtros">
+        <label>Imputación <select id="f-imputacion"></select></label>
+        <label>Tipo <select id="f-tipo"></select></label>
+        <label>Mes <select id="f-mes"></select></label>
+        <label>Control <select id="f-control"></select></label>
+        <p id="total-filtro" class="total-filtro"></p>
+      </div>
+      <div class="tabla-scroll alta"><table id="tabla-movimientos"></table></div>
+      <p id="nota-movimientos" class="nota"></p>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="reglas.js"></script>
+  <script src="parser.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
