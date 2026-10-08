@@ -20,12 +20,7 @@ Convierte resúmenes de cuenta en PDF (Banco Nación) en un Excel clasificado y 
 
 Usá los PDF originales descargados del home banking. Un PDF escaneado, unido con iLovePDF o impreso con "Microsoft Print to PDF" queda como imagen y no se puede leer. No hace falta unirlos: se pueden subir varios a la vez.
 
-## Cambiar la clasificación
+Para cambiar la clasificación, editá `reglas.js` (las instrucciones están al principio del archivo).
 
-Editá `reglas.js`. Cada regla dice qué textos debe contener la descripción y qué imputación asignar. Gana la primera que coincide, así que las reglas más específicas van arriba.
 
-## Publicar en GitHub Pages
 
-1. Creá un repositorio nuevo y subí todos los archivos.
-2. En Settings → Pages, elegí la rama `main` y la carpeta `/ (root)`.
-3. En un minuto queda disponible en `https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/`.
